@@ -10,8 +10,8 @@ import java.awt.font.FontRenderContext;
 import java.util.Random;
 
 public class GameCenter extends JPanel implements ActionListener {
-    static final int SCREEN_WIDTH = 600;
-    static final int SCREEN_HEIGHT = 600;
+    static final int SCREEN_WIDTH = 800;
+    static final int SCREEN_HEIGHT = 800;
     static final int UNIT_SIZE = 25;
     static final int GAME_UNITS = (SCREEN_WIDTH*SCREEN_HEIGHT)/UNIT_SIZE;
     static final int DELAY = 110;
@@ -58,10 +58,10 @@ public class GameCenter extends JPanel implements ActionListener {
                     g.fillRect(x[i], y[i], UNIT_SIZE, UNIT_SIZE);
                 }
             }
-            g.setColor(Color.red);
+            g.setColor(Color.magenta);
             g.setFont(new Font("Times new roman", Font.BOLD, 35));
             FontMetrics metrics = getFontMetrics(g.getFont());
-            g.drawString("DAL -Snake by Medard - Score: "+applesEaten, (600 - metrics.stringWidth("DAL -Snake - Score: "+applesEaten))/2,g.getFont().getSize());
+            g.drawString("Snake Game - Score: "+applesEaten, (SCREEN_WIDTH - metrics.stringWidth("Snake - Score: "+applesEaten))/2,g.getFont().getSize());
         }
         else {
             gameOver(g);
@@ -135,13 +135,13 @@ public class GameCenter extends JPanel implements ActionListener {
     }
     public void gameOver(Graphics g){
         // Text
-        g.setColor(Color.red);
+        g.setColor(Color.magenta);
         g.setFont(new Font("Times new roman", Font.BOLD, 35));
         FontMetrics metrics = getFontMetrics(g.getFont());
-        g.drawString("Game Over. Thanks for playing", (SCREEN_WIDTH - metrics.stringWidth("Game Over"))/2,SCREEN_HEIGHT/2);
+        g.drawString("Game Over. Thanks for playing", (SCREEN_WIDTH - metrics.stringWidth("Game Over"))/3,SCREEN_HEIGHT/2);
 
         FontMetrics metrics2 = getFontMetrics(g.getFont());
-        g.drawString("DAL Snake by Medard - Score: "+applesEaten, (400 - metrics.stringWidth("DAL Snake - Score: "+applesEaten))/2,g.getFont().getSize());
+        g.drawString("Snake Run - Score: "+applesEaten, (400 - metrics.stringWidth("Snake - Score: "+applesEaten)/3),g.getFont().getSize());
 
     }
     @Override
