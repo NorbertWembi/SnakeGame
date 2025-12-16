@@ -9,7 +9,7 @@ import javax.swing.*;
 import java.awt.font.FontRenderContext;
 import java.util.Random;
 
-public class GameItem extends JPanel implements ActionListener {
+public class GameCenter extends JPanel implements ActionListener {
     static final int SCREEN_WIDTH = 600;
     static final int SCREEN_HEIGHT = 600;
     static final int UNIT_SIZE = 25;
@@ -26,7 +26,7 @@ public class GameItem extends JPanel implements ActionListener {
     Timer timer;
     Random random;
 
-    GameItem(){
+    GameCenter(){
         random = new Random();
         this.setPreferredSize(new Dimension(SCREEN_WIDTH,SCREEN_HEIGHT));
         this.setBackground(Color.white);

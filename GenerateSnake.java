@@ -1,9 +1,9 @@
 // Norbert wembi
 import javax.swing.*;
 
-public class Snake extends JFrame {
+public class GenerateSnake extends JFrame {
     GenerateSnake(){
-        this.add(new GameItem());
+        this.add(new GameCenter());
         this.setTitle("Snake");
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setResizable(false);

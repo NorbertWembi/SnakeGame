@@ -1,5 +1,5 @@
 // Norbert wembi
-public class SnakeGame {
+public class GenerateApple {
     public static void main(String[] args) {
         // auto generated method stubs
         new GenerateSnake();
